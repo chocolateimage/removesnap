@@ -24,7 +24,7 @@ if profile == None:
 
 to_add = f"[Install4F96D1932A9F858E]\nDefault={profile}\n\n"
 
-with open(profiles_contents, "w+") as f:
+with open(profiles_path, "w+") as f:
     f.write(to_add + profiles_contents)
 
 print(f"Migrated Firefox profile \"{profile}\"")
