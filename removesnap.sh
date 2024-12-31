@@ -32,3 +32,6 @@ sudo systemctl disable var-snap-firefox-common-host\\x2dhunspell.mount
 sudo snap remove firefox
 
 sudo apt install -f firefox
+
+# Migrate Firefox profile
+python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migratefirefoxprofile.py)
