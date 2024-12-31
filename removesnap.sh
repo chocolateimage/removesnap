@@ -8,7 +8,7 @@ killall firefox
 
 mv -f ~/snap/firefox/common/.mozilla ~/
 
-sudo add-apt-repository ppa:mozillateam/ppa
+sudo add-apt-repository --yes ppa:mozillateam/ppa
 
 echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
 
@@ -31,4 +31,4 @@ sudo systemctl stop var-snap-firefox-common-host\\x2dhunspell.mount
 sudo systemctl disable var-snap-firefox-common-host\\x2dhunspell.mount
 sudo snap remove firefox
 
-sudo apt install firefox
+sudo apt install -f firefox
