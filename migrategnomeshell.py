@@ -1,4 +1,9 @@
-#!/usr/bin/env python3
+#
+# This script will be run automatically inside of "removesnap.sh", you
+# do not need to run this script yourself
+#
+
+
 import subprocess
 
 schema = "org.gnome.shell"
