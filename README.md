@@ -4,6 +4,7 @@ Removes snaps from a default Ubuntu installation and installs the native counter
 Currently only tested with:
 - Kubuntu 24.10
 - Xubuntu 24.04
+- Lubuntu 24.04
 
 ## Usage
 
