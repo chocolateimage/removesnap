@@ -36,7 +36,7 @@ sudo systemctl stop var-snap-firefox-common-host\\x2dhunspell.mount
 sudo systemctl disable var-snap-firefox-common-host\\x2dhunspell.mount
 sudo snap remove firefox
 
-sudo apt install -y firefox
+sudo apt install -y --allow-downgrades firefox
 
 # Migrate Firefox profile
 python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migratefirefoxprofile.py)
@@ -45,7 +45,7 @@ python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/
 killall thunderbird
 
 sudo snap remove thunderbird
-sudo apt install -y thunderbird
+sudo apt install -y --allow-downgrades thunderbird
 
 # === Firmware Updater ===
 sudo snap remove firmware-updater
