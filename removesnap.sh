@@ -65,4 +65,6 @@ fi
 sudo apt remove --auto-remove -y snapd
 
 # === Final touches ===
+sudo apt remove -y lubuntu-snap-installation-monitor
+
 rm -rf ~/snap
