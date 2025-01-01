@@ -65,6 +65,11 @@ fi
 sudo apt remove --auto-remove -y snapd
 
 # === Final touches ===
+# Migrate Gnome Shell Favorite Apps
+if command -v gnome-shell; then
+    python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migrategnomeshell.py)
+fi
+
 sudo apt remove -y lubuntu-snap-installation-monitor
 
 rm -rf ~/snap
