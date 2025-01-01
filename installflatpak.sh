@@ -13,6 +13,8 @@ if dpkg -s gnome-software; then
     sudo apt install -y gnome-software-plugin-flatpak
 fi
 
+sudo apt install -y zenity
+
 if zenity --question --title="Flatpak install" --text="A restart is required, do you want to restart now?" --ok-label=Yes --cancel-label=No; then
     reboot
 fi
