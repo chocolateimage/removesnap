@@ -51,6 +51,12 @@ sudo apt install -y thunderbird
 sudo snap remove firmware-updater
 sudo apt install -y gnome-firmware
 
+# === Software Center ===
+if snap list snap-store; then
+    sudo snap remove snap-store
+    sudo apt install -y gnome-software
+fi
+
 # === snapd ===
 sudo apt remove --auto-remove -y snapd
 
