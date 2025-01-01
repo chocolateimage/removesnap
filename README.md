@@ -1,6 +1,9 @@
 # removesnap
 Removes snaps from a default Ubuntu installation and installs the native counterparts. (Experimental)
 
+Currently only tested with:
+- Kubuntu 24.10
+
 ## Usage
 
 Copy and paste this to your terminal and press enter, make sure the system has been updated:
