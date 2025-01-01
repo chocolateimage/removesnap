@@ -2,6 +2,8 @@
 Removes snaps from a default Ubuntu installation and installs the native counterparts. (Experimental)
 
 Currently only tested with:
+- Ubuntu 24.04
+- Ubuntu 24.10
 - Kubuntu 24.10
 - Xubuntu 24.04
 - Lubuntu 24.04
