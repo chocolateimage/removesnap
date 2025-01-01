@@ -7,6 +7,7 @@ Currently only tested with:
 - Kubuntu 24.10
 - Xubuntu 24.04
 - Lubuntu 24.04
+- Edubuntu 24.04
 
 ## Usage
 
