@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+#
+# Please read the README.md located at
+# https://github.com/chocolateimage/removesnap/blob/main/README.md
+#
+#
 
 
 # === Firefox ===

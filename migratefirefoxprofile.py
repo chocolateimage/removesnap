@@ -1,3 +1,8 @@
+#
+# This script will be run automatically inside of "removesnap.sh", you
+# do not need to run this script yourself
+#
+
 import os
 home = os.path.expanduser("~")
 profiles_path = home + "/.mozilla/firefox/profiles.ini"
