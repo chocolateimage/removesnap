@@ -5,6 +5,10 @@
 #
 #
 
+if ! command -v snap; then
+    echo "Snap is already uninstalled"
+    exit 0
+fi
 
 # === Firefox ===
 # Based on https://askubuntu.com/a/1404401
