@@ -70,6 +70,15 @@ if command -v gnome-shell; then
     python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migrategnomeshell.py)
 fi
 
+# Migrate LXQT Panel Quicklaunch
+if command -v lxqt-panel; then
+    wget -qO /tmp/migratelxqt.py https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migratelxqt.py
+    sudo python3 /tmp/migratelxqt.py /etc/xdg/xdg-Lubuntu/lxqt/panel.conf
+    python3 /tmp/migratelxqt.py ~/.config/lxqt/panel.conf
+    python3 /tmp/migratelxqt.py
+    rm -f /tmp/migratelxqt.py
+fi
+
 sudo apt remove -y lubuntu-snap-installation-monitor
 
 rm -rf ~/snap
