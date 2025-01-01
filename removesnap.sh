@@ -45,3 +45,6 @@ sudo apt install -y thunderbird
 # === Firmware Updater ===
 sudo snap remove firmware-updater
 sudo apt install -y gnome-firmware
+
+# === snapd ===
+sudo apt remove --auto-remove -y snapd
