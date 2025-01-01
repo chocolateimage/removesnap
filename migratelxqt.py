@@ -2,9 +2,11 @@
 import subprocess
 import os
 import sys
+import time
 
 if len(sys.argv) == 1:
     subprocess.run(["killall", "lxqt-panel"])
+    time.sleep(0.5)
     subprocess.Popen(["lxqt-panel"])
     exit(0)
 
