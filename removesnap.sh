@@ -53,3 +53,6 @@ sudo apt install -y gnome-firmware
 
 # === snapd ===
 sudo apt remove --auto-remove -y snapd
+
+# === Final touches ===
+rm -rf ~/snap
