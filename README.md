@@ -11,3 +11,7 @@ Copy and paste this to your terminal and press enter, make sure the system has b
 bash <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/removesnap.sh)
 ```
 
+If you also want to have Flatpak with Flathub set up, use this command:
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/installflatpak.sh)
+```
