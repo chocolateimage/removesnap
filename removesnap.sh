@@ -61,6 +61,9 @@ if snap list snap-store; then
     sudo apt install -y gnome-software
 fi
 
+# === Budgie Welcome ===
+sudo snap remove ubuntu-budgie-welcome
+
 # === snapd ===
 sudo apt remove --auto-remove -y snapd
 
@@ -77,6 +80,18 @@ if command -v lxqt-panel; then
     python3 /tmp/migratelxqt.py ~/.config/lxqt/panel.conf
     python3 /tmp/migratelxqt.py
     rm -f /tmp/migratelxqt.py
+fi
+# Migrate Budgie Dock
+if command -v budgie-desktop; then
+    echo '[PlankDockItemPreferences]
+Launcher=file:///usr/share/applications/firefox.desktop
+' | tee ~/.config/plank/dock1/launchers/firefox_firefox.dockitem
+    echo '[PlankDockItemPreferences]
+Launcher=file:///usr/share/applications/firefox.desktop
+' | sudo tee /usr/share/budgie-desktop/home-folder/.config/plank/dock1/launchers/firefox_firefox.dockitem
+
+    rm -f ~/.config/plank/dock1/launchers/budgie-welcome.dockitem
+    sudo rm -f /usr/share/budgie-desktop/home-folder/.config/plank/dock1/launchers/budgie-welcome.dockitem
 fi
 
 # Change Xfce's default application from snap Firefox to default one
