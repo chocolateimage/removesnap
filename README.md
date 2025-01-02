@@ -11,6 +11,7 @@ Currently only tested with:
 - Lubuntu 24.04
 - Edubuntu 24.04
 - Ubuntu Budgie 24.04
+- Ubuntu Cinnamon 24.04
 
 ## Usage
 
