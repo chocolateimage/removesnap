@@ -86,4 +86,6 @@ rm -f ~/.config/xfce4/helpers.rc
 
 sudo apt remove -y lubuntu-snap-installation-monitor
 
+sudo rm -f /etc/xdg/autostart/snap-userd-autostart.desktop
+
 rm -rf ~/snap
