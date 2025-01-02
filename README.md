@@ -10,6 +10,7 @@ Currently only tested with:
 - Xubuntu 24.04
 - Lubuntu 24.04
 - Edubuntu 24.04
+- Ubuntu Budgie 24.04
 
 ## Usage
 
