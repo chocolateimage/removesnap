@@ -106,6 +106,19 @@ if command -v plasmashell; then
         systemctl restart --user plasma-plasmashell.service
     fi
 fi
+# Migrate MATE Panel
+if command -v mate-panel; then
+    gsettings set org.mate.panel.object:/org/mate/panel/objects/firefox/ launcher-location '/usr/share/applications/firefox.desktop'
+
+    echo '[PlankDockItemPreferences]
+Launcher=file:///usr/share/applications/firefox.desktop
+' | tee ~/.config/plank/dock1/launchers/firefox_firefox.dockitem
+    echo '[PlankDockItemPreferences]
+Launcher=file:///usr/share/applications/firefox.desktop
+' | sudo tee /usr/share/ubuntu-mate/settings-overlay/config/plank/dock1/launchers/firefox_firefox.dockitem
+
+    killall mate-panel
+fi
 
 # Set default browser to Firefox instead of snap's Firefox
 xdg-settings set default-web-browser firefox.desktop
