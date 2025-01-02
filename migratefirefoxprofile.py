@@ -34,3 +34,21 @@ with open(profiles_path, "w+") as f:
     f.write(to_add + profiles_contents)
 
 print(f"Migrated Firefox profile \"{profile}\"")
+
+# Disable default browser check
+
+prefs_path = home + "/.mozilla/firefox/" + profile + "/user.js"
+prefs_contents = ""
+if os.path.exists(prefs_path):
+    with open(prefs_path, "r") as f:
+        prefs_contents = f.read()
+
+if "checkDefaultBrowser" in prefs_contents:
+    prefs_contents = prefs_contents.replace('user_pref("browser.shell.checkDefaultBrowser", true);', 'user_pref("browser.shell.checkDefaultBrowser", false);')
+else:
+    prefs_contents += '\nuser_pref("browser.shell.checkDefaultBrowser", false);\n'
+
+with open(prefs_path, "w+") as f:
+    f.write(prefs_contents)
+
+print(f"Disabled default browser check for \"{profile}\"")
