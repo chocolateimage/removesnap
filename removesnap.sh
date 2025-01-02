@@ -45,6 +45,9 @@ sudo apt install -y --allow-downgrades firefox
 # Migrate Firefox profile
 python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migratefirefoxprofile.py)
 
+# Set default browser to Firefox instead of snap's Firefox
+xdg-settings set default-web-browser firefox.desktop
+
 # === Thunderbird ===
 killall thunderbird
 
