@@ -14,6 +14,9 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 if dpkg -s gnome-software; then
     sudo apt install -y gnome-software-plugin-flatpak
 fi
+if dpkg -s plasma-discover; then
+    sudo apt install -y plasma-discover-backend-flatpak
+fi
 
 if command -v kdialog; then
     if kdialog --yesno "A restart is required, do you want to restart now?" --title "Flatpak install"; then
