@@ -70,6 +70,9 @@ fi
 # === Budgie Welcome ===
 sudo snap remove ubuntu-budgie-welcome
 
+# === Left overs ===
+sudo snap remove desktop-security-center
+
 # === snapd ===
 sudo apt remove --auto-remove -y snapd
 
