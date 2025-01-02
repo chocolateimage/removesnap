@@ -79,6 +79,11 @@ if command -v lxqt-panel; then
     rm -f /tmp/migratelxqt.py
 fi
 
+# Change Xfce's default application from snap Firefox to default one
+rm -f ~/.config/xfce4/helpers.rc
+
+# Other
+
 sudo apt remove -y lubuntu-snap-installation-monitor
 
 rm -rf ~/snap
