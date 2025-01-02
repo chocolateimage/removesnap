@@ -97,6 +97,7 @@ fi
 if command -v plasmashell; then
     if command -v kwriteconfig5; then
         kwriteconfig5 --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
+        systemctl restart --user plasma-plasmashell.service
     fi
 fi
 
