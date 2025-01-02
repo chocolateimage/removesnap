@@ -45,9 +45,6 @@ sudo apt install -y --allow-downgrades firefox
 # Migrate Firefox profile
 python3 <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/migratefirefoxprofile.py)
 
-# Set default browser to Firefox instead of snap's Firefox
-xdg-settings set default-web-browser firefox.desktop
-
 # === Thunderbird ===
 killall thunderbird
 
@@ -96,6 +93,17 @@ Launcher=file:///usr/share/applications/firefox.desktop
     rm -f ~/.config/plank/dock1/launchers/budgie-welcome.dockitem
     sudo rm -f /usr/share/budgie-desktop/home-folder/.config/plank/dock1/launchers/budgie-welcome.dockitem
 fi
+# Migrate KDE Plasma Task Manager (https://superuser.com/a/1822153)
+if command -v plasmashell; then
+    if command -v kwriteconfig5; then
+        kwriteconfig5 --file ~/.config/kdeglobals --group General --key BrowserApplication firefox.desktop
+    fi
+fi
+
+# Set default browser to Firefox instead of snap's Firefox
+xdg-settings set default-web-browser firefox.desktop
+xdg-mime default firefox.desktop x-scheme-handler/https
+xdg-mime default firefox.desktop x-scheme-handler/http
 
 # Change Xfce's default application from snap Firefox to default one
 rm -f ~/.config/xfce4/helpers.rc
