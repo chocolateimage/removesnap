@@ -67,11 +67,19 @@ if snap list snap-store; then
     sudo apt install -y gnome-software
 fi
 
-# === Budgie Welcome ===
-sudo snap remove ubuntu-budgie-welcome
-
 # === Left overs ===
+for name in $(snap list | tail -n +2 | awk '{print $1}'); do
+    sudo snap remove $name
+done
 sudo snap remove desktop-security-center
+sudo snap remove prompting-client
+sudo snap remove gnome-42-2204
+sudo snap remove gtk-common-themes
+sudo snap remove snapd-desktop-integration
+sudo snap remove core24
+sudo snap remove core22
+sudo snap remove bare
+sudo snap remove snapd
 
 # === snapd ===
 sudo apt remove --auto-remove -y snapd
