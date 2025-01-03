@@ -16,12 +16,14 @@ Currently only tested with:
 
 ## Usage
 
-Copy and paste this to your terminal and press enter, make sure the system has been updated:
-```bash
-bash <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/removesnap.sh)
-```
+Copy and paste one of these commands into your terminal and press enter, make sure the system has been updated:
 
-If you want to remove snap and have Flatpak with Flathub set up, use this command:
+- **Remove Snaps + Setup Flatpak with Flathub (Recommended)**
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/installflatpak.sh)
+```
+
+- Remove Snaps
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/chocolateimage/removesnap/refs/heads/main/removesnap.sh)
 ```
