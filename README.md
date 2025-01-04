@@ -20,6 +20,10 @@ Currently only tested with:
 > [!NOTE]
 > Make sure to close all programs before executing the command and don't touch the computer during the process unless instructed to enter in a password or to restart.
 
+> [!TIP]
+> It's recommended to run this command after a release upgrade (for example 24.04 -> 24.10).
+> Your Firefox profiles will be migrated automatically.
+
 Copy and paste one of these commands into your terminal and press enter, make sure the system has been updated:
 
 - **Remove Snaps + Setup Flatpak with Flathub (Recommended)**
