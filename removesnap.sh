@@ -16,6 +16,9 @@ fi
 
 killall firefox
 
+if [ -d ~/snap/firefox ]; then
+    rm -rf ~/.mozilla
+fi
 mv -f ~/snap/firefox/common/.mozilla ~/
 
 # For Thunderbird
