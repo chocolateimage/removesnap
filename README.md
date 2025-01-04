@@ -17,6 +17,9 @@ Currently only tested with:
 
 ## Usage
 
+> [!NOTE]
+> Make sure to close all programs before executing the command and don't touch the computer during the process unless instructed to enter in a password or to restart.
+
 Copy and paste one of these commands into your terminal and press enter, make sure the system has been updated:
 
 - **Remove Snaps + Setup Flatpak with Flathub (Recommended)**
