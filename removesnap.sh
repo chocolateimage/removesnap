@@ -139,6 +139,11 @@ xdg-settings set default-web-browser firefox.desktop
 xdg-mime default firefox.desktop x-scheme-handler/https
 xdg-mime default firefox.desktop x-scheme-handler/http
 
+# Seems to fix Firefox's default browser check.
+# Firefox's default app name is "firefox-bin" but this overrides it to "firefox".
+# https://searchfox.org/mozilla-central/source/browser/components/shell/nsGNOMEShellService.cpp
+echo 'export MOZ_APP_LAUNCHER=firefox' | sudo tee /etc/profile.d/firefox-appname-fix.sh
+
 # Change Xfce's default application from snap Firefox to default one
 rm -f ~/.config/xfce4/helpers.rc
 
