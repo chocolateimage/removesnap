@@ -1,7 +1,8 @@
 # removesnap
 Removes snaps from a default Ubuntu installation and installs the native counterparts. (Experimental)
 
-Currently only tested with:
+Currently tested with:
+- Ubuntu 25.04
 - Ubuntu 24.10
 - Ubuntu 24.04
 - Ubuntu 22.04
