@@ -5,6 +5,7 @@ Currently only tested with:
 - Ubuntu 24.10
 - Ubuntu 24.04
 - Ubuntu 22.04
+- Kubuntu 25.04
 - Kubuntu 24.10
 - Kubuntu 24.04
 - Xubuntu 24.10
